@@ -86,10 +86,16 @@
   font-size: 15px;
 }
 
+.input-name-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .input-name {
   width: 130px;
   margin: 5px 20px 0 20px;
-  height: 48px;
+  height: 30px;
   line-height: 30px;
   padding: 10px 16px 8px;
   border-radius: 4px;
