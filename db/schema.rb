@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_09_30_065123) do
     t.date "birthday", null: false
     t.string "hobby", default: ""
     t.text "free_space", null: false
+    t.integer "email"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
