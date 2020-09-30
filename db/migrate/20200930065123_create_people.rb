@@ -8,7 +8,7 @@ class CreatePeople < ActiveRecord::Migration[6.0]
       t.date       :birthday,           null: false
       t.string     :hobby,              default: ""
       t.text       :free_space,         null: false
-      t.integer    :email,              default: ""
+      t.string     :email,              default: ""
       t.references :user,               foreign_key: true
       t.timestamps
     end
