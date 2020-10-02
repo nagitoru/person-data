@@ -25,6 +25,12 @@
   text-align: center;
 }
 
+.search-btn {
+  background-color: rgba(110, 205, 235, 0.932);
+  width: 100px;
+  margin-left: 50px;
+}
+
 .link {
   text-decoration: none;
   color: black;

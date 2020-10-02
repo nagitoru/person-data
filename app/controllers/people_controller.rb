@@ -16,6 +16,10 @@ class PeopleController < ApplicationController
     end
   end
 
+  def search
+    @tweets = Person.search(params[:keyword])
+  end
+
   private
 
   def person_params

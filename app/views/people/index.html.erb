@@ -3,9 +3,10 @@
   <div class='top-page-title'>
     Person 一覧
   </div>
-  <div class='search-box'>
-    <input type=form id="form" class="search-word" placeholder="調べたい名前を入力してください" >
-  </div>
+  <%= form_with url: search_people_path, local: true, method: :get, class:'search-box' do |form| %>
+    <%= form.text_field :keyword, placeholder: "名前を検索する", class: "search-word" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
   <ul class='person-lists'>
     <% if @people.present? %>
       <%= render partial: 'person', collection: @people %>
