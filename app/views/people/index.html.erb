@@ -3,7 +3,9 @@
   <div class='top-page-title'>
     Person 一覧
   </div>
-  <div >
+  <div class='search-box'>
+    <input type=form id="form" class="search-word" placeholder="調べたい名前を入力してください" >
+  </div>
   <ul class='person-lists'>
     <% if @people.present? %>
       <%= render partial: 'person', collection: @people %>
