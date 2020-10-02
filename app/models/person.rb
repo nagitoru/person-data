@@ -1,4 +1,6 @@
 class Person < ApplicationRecord
+  belongs_to :user
+
   with_options presence: true do
     validates :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は漢字・ひらがな・カタカナのいずれかで入力してください' }
     validates :last_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は漢字・ひらがな・カタカナのいずれかで入力してください' }

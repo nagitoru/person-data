@@ -14,4 +14,6 @@ class User < ApplicationRecord
     validates :first_name_reading, format: { with: /\A[ァ-ヶー－]+\z/, message: 'はカタカナで入力してください' }
     validates :last_name_reading, format: { with: /\A[ァ-ヶー－]+\z/, message: 'はカタカナで入力してください' }
   end
+
+  has_many :people
 end
