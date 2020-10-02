@@ -1,5 +1,6 @@
 class PeopleController < ApplicationController
   def index
+    @people = current_user.people
   end
 
   def new
