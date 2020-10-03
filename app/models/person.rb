@@ -11,10 +11,6 @@ class Person < ApplicationRecord
   end
 
   def self.search(search)
-    if search != ""
-      Tweet.where('text LIKE(?)', "%#{search}%")
-    else
-      Tweet.all
-    end
+    Person.where(['first_name LIKE ? OR last_name LIKE ? OR first_name_reading LIKE ? OR last_name_reading LIKE ?', "%#{search}%", "%#{search}%","%#{search}%","%#{search}%"])
   end
 end
