@@ -13,6 +13,24 @@
   font-size: 50px;
 }
 
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.search-word {
+  width: 300px;
+  height: 40px;
+  text-align: center;
+}
+
+.search-btn {
+  background-color: rgba(110, 205, 235, 0.932);
+  width: 100px;
+  margin-left: 50px;
+}
+
 .link {
   text-decoration: none;
   color: black;

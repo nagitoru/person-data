@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <div class='top-page-main'>
   <div class='top-page-title'>
-    Person 一覧
+    Person 検索結果一覧
   </div>
   <%= form_with url: search_people_path, local: true, method: :get, class:'search-box' do |form| %>
     <%= form.text_field :keyword, placeholder: "名前を検索する", class: "search-word" %>
@@ -12,6 +12,9 @@
       <%= render partial: 'person', collection: @people %>
     <% end %>
   </ul>
+  <div class="sign-up-pages">
+    <%= link_to "一覧表示に戻る", root_path, class:"sign-up-page"%>
+  </div>
 </div>
 <%= link_to new_person_path do%>
   <div class='memories-btn'>

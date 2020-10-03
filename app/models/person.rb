@@ -9,4 +9,8 @@ class Person < ApplicationRecord
     validates :birthday
     validates :free_space
   end
+
+  def self.search(search)
+    Person.where(['first_name LIKE ? OR last_name LIKE ? OR first_name_reading LIKE ? OR last_name_reading LIKE ?', "%#{search}%", "%#{search}%","%#{search}%","%#{search}%"])
+  end
 end
