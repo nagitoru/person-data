@@ -32,6 +32,14 @@ class PeopleController < ApplicationController
   def edit
   end
 
+  def update
+    if @person.update(person_params)
+      redirect_to person_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
     if @person.destroy
       redirect_to root_path
