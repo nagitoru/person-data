@@ -35,3 +35,28 @@
   font-size: 20px;
   margin-left: 25px;
 }
+
+.item-red-btn {
+  text-align: center;
+  background-color: #31c2a0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 7vw;
+  text-decoration: none;
+}
+
+.or-text {
+  font-size: 20px;
+}
+
+.item-destroy {
+  background-color: #ea352d;
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 7vw;
+  text-decoration: none;
+}

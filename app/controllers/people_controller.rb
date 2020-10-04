@@ -37,5 +37,6 @@ class PeopleController < ApplicationController
 
   def set_item
     @person = Person.find(params[:id])
+    redirect_to root_path unless current_user == @person.user
   end
 end
