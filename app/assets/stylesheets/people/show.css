@@ -1,0 +1,36 @@
+.item-show {
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-box {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-page-title {
+  display: flex;
+  justify-content: center;
+  color: rgba(33, 33, 34, 0.89);
+  padding-top: 8vh;
+  font-size: 50px;
+}
+
+.detail-item {
+  width: 60%;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.detail-value {
+  padding: 5px;
+  font-size: 20px;
+}
