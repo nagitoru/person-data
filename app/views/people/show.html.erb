@@ -6,12 +6,21 @@
       <%= @person.first_name%>  <%= @person.last_name %>
     </div>
     <div class="detail-item">＜年齢＞
-        <div class="detail-value">
-          <%= (Date.today.strftime('%Y%m%d').to_i - @person.birthday.strftime('%Y%m%d').to_i) / 10000 %>
-        </div>
+      <div class="detail-value">
+        <%= (Date.today.strftime('%Y%m%d').to_i - @person.birthday.strftime('%Y%m%d').to_i) / 10000 %>
+      </div>
+    </div>
+    <div class="detail-item">＜誕生日＞
+      <div class="detail-value"><%= @person.birthday.strftime('%Y年%m月%d日') %></div>
     </div>
     <div class="detail-item">＜趣味＞
-        <div class="detail-value"><%= @person.hobby %></div>
+      <div class="detail-value"><%= @person.hobby %></div>
+    </div>
+    <div class="detail-item">＜その他の情報＞
+      <div class="detail-value"><%= @person.free_space %></div>
+    </div>
+    <div class="detail-item">＜Eメール＞
+      <div class="detail-value"><%= @person.email %></div>
     </div>
   </div>
 </div>
