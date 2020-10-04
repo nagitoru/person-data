@@ -5,6 +5,11 @@
     <div class='show-page-title'>
       <%= @person.first_name%>  <%= @person.last_name %>
     </div>
+    <div class="detail-item">＜年齢＞
+        <div class="detail-value">
+          <%= (Date.today.strftime('%Y%m%d').to_i - @person.birthday.strftime('%Y%m%d').to_i) / 10000 %>
+        </div>
+    </div>
     <div class="detail-item">＜趣味＞
         <div class="detail-value"><%= @person.hobby %></div>
     </div>

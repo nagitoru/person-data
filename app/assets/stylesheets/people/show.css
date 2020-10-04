@@ -1,5 +1,5 @@
 .item-show {
-  background-color: #f8f8f8;
+  background-color: rgba(227, 246, 250, 0.932);
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
 }
 
 .item-box {
-  background-color: #FFF;
+  background-color: rgba(227, 246, 250, 0.932);
   width: 70vw;
   min-width: 1200px;
   padding: 10vh 15vw;
