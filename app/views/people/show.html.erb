@@ -1,0 +1,40 @@
+<%= render "shared/header" %>
+
+<div class='item-show'>
+  <div class="item-box">
+    <div class='show-page-title'>
+      <%= @person.first_name%>  <%= @person.last_name %>
+    </div>
+    <div class="detail-item">＜年齢＞
+      <div class="detail-value">
+        <%= (Date.today.strftime('%Y%m%d').to_i - @person.birthday.strftime('%Y%m%d').to_i) / 10000 %>
+      </div>
+    </div>
+    <div class="detail-item">＜誕生日＞
+      <div class="detail-value"><%= @person.birthday.strftime('%Y年%m月%d日') %></div>
+    </div>
+    <div class="detail-item">＜趣味＞
+      <div class="detail-value"><%= @person.hobby %></div>
+    </div>
+    <div class="detail-item">＜その他の情報＞
+      <div class="detail-value"><%= @person.free_space %></div>
+    </div>
+    <div class="detail-item">＜Eメール＞
+      <div class="detail-value"><%= @person.email %></div>
+    </div>
+    <%= link_to '情報の編集', edit_person_path(@person.id), method: :get, class: "item-red-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', person_path(@person.id), method: :delete, class:'item-destroy' %>
+    <div class="sign-up-pages">
+      <%= link_to "一覧表示に戻る", root_path, class:"sign-up-page"%>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
+
+<%= link_to new_person_path do%>
+  <div class='memories-btn'>
+    <div class='memories-btn-text'>記録する</div>
+  </div>
+<% end %>
