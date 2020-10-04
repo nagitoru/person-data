@@ -19,7 +19,7 @@ class PeopleController < ApplicationController
   end
 
   def search
-    if params[:keyword] == ""
+    if params[:keyword] == ''
       redirect_to root_path
     else
       @people = Person.search(params[:keyword]).where(user_id: current_user.id)
