@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-  before_action :set_item, only: [:show, :destroy]
+  before_action :set_item, only: [:show, :destroy, :edit, :update]
 
   def index
     @people = current_user.people
@@ -27,6 +27,17 @@ class PeopleController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @person.update(person_params)
+      redirect_to person_path
+    else
+      render :edit
+    end
   end
 
   def destroy
